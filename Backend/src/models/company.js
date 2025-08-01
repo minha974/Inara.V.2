@@ -1,9 +1,11 @@
-const mongoose = require('mongoose')
+const mongoose = require('mongoose');
+const { type } = require('os');
 const companySchema = new mongoose.Schema({
     companyName:{type:String,required:true},
-    locationName:{type:string},
+    locationName:{type:String},
     companyInChargeName:{type:String,required:true},
-    gstNo:{type:string}
+    gstNo:{type:String},
+    status:{type:Boolean}
 });
 const companyModel = mongoose.model('Company',companySchema);
 module.exports = companyModel

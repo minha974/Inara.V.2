@@ -9,9 +9,8 @@ const activitySchema = new mongoose.Schema(
             activity:{type:String,default:'abcd'},
             response:{type:String},
             status:{type:Boolean,default:false},
-
         }],
     }
-)
+);
 const activityModel = mongoose.model('Activity',activitySchema)
-module.exports = activityModel
+module.exports = activityModel;
