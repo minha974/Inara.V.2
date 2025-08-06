@@ -23,4 +23,13 @@ exports.createCompany = async(req,res,next)=>{
     } catch (error) {
         console.log(error);       
     }
-}
+};
+
+exports.findAll = async(req,res,next)=>{
+    try {
+        const companies = await Company.find();
+        res.json(companies);
+    } catch (error) {
+        next(error)
+    }
+};

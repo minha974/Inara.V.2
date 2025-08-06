@@ -1,4 +1,5 @@
 const mongoose = require("../assets/database");
+const mongoosePaginate = require('mongoose-paginate-v2');
 const userSchema = new mongoose.Schema({
     name:{type:String,required:true,min:6,max:255},
     emailId:{type:String,required:true,min:6,max:255},
@@ -11,5 +12,8 @@ const userSchema = new mongoose.Schema({
     isSalaried:{type:Boolean},
     md:{type:Boolean,default:false},   
 });
+
+userSchema.plugin(mongoosePaginate);
+
 const userModel = mongoose.model("User",userSchema);
 module.exports = userModel;

@@ -5,7 +5,7 @@ exports.register = async (req,res,next) =>{
     try {
 
         console.log("hit  to controller")
-        const { username, emailId, password, firstName, lastName } = req.body;
+        const { username, emailId, password, firstName, lastName, } = req.body;
 
         const existingUser = await User.findOne({
             $or:[{emailId},{username}]
