@@ -122,7 +122,7 @@ const clientSchema = new mongoose.Schema({
     address1:{type:String,max:150},
     address2:{type:String,max:150},
     pincode:{type:Number},
-    status:{type:String,defualt:'WL'},
+    status:{type:String,default:'WL'},
     date:{type:Date,default:Date.now},
     remarks:{type:String},
     preferredTiming:{type:String},
